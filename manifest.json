@@ -1,0 +1,20 @@
+{
+    "name": "OneclickTranslator",
+    "version": "1.0",
+    "description": "French To English tanslator!",
+    "manifest_version": 2,
+    "permissions": ["activeTab"],
+    "browser_action":{
+    "default_icon":"icon.png"
+},
+    "web_accessible_resources": ["axios.min.js","uuidv4.min.js","inject.js"],
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["script.js"]
+        }
+      ]
+
+  }
